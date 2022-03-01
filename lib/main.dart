@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:todo_app/models/task_model.dart';
 import 'package:todo_app/widgets/go_premium.dart';
 import 'package:todo_app/widgets/task.dart';
 
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
         title: 'Todo App',
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              GoPremium(),
+              const GoPremium(),
               Padding(
                 padding: const EdgeInsets.fromLTRB(15, 15, 15, 0),
                 child: Text('Tasks' , style: GoogleFonts.poppins(
@@ -43,7 +42,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.black,
           onPressed: (){},
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
           ),
         floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
         ),
@@ -58,16 +57,16 @@ AppBar _buildAppBar(){
       color: Colors.black,
       ),
     ),
-    actions: [
+    actions: const [
       Icon(Icons.more_vert,color: Colors.black54,)
     ],
     elevation: 0,
     backgroundColor: Colors.white,
     leading: Container(
-      margin: EdgeInsets.only(left: 15, top: 10, bottom: 5),
+      margin: const EdgeInsets.only(left: 15, top: 10, bottom: 5),
        decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          image: DecorationImage(
+          image: const DecorationImage(
             image: AssetImage('assets/profile.jpg'),
             fit: BoxFit.cover
             )
@@ -83,8 +82,10 @@ Widget _buildBottomNavBar(){
     showSelectedLabels: false,
     unselectedItemColor: Colors.grey,
     type: BottomNavigationBarType.fixed,
+    selectedFontSize: 0,
+    unselectedFontSize: 0,
     iconSize: 30,
-    items: [
+    items: const [
         BottomNavigationBarItem(
         icon: Icon(Icons.home),
         label: 'Home'

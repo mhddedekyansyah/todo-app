@@ -25,9 +25,9 @@ class GoPremium extends StatelessWidget {
                     color: Colors.grey.withOpacity(0.5),
                     shape: BoxShape.circle
                   ),
-                  child: Icon(Icons.bolt_rounded, color: Colors.white,),
+                  child: const Icon(Icons.bolt_rounded, color: Colors.white,),
                 ),
-                SizedBox(width: 20,),
+                const SizedBox(width: 20,),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -56,7 +56,7 @@ class GoPremium extends StatelessWidget {
                 color: Colors.blue,
                 borderRadius: BorderRadius.circular(20)
               ),
-              child: Icon(Icons.arrow_forward, color: Colors.white,),
+              child: const Icon(Icons.arrow_forward, color: Colors.white,),
             )
           )
         ],
